@@ -1,7 +1,7 @@
 {
-  "name": "nodemysql",
+  "name": "cmanagement",
   "version": "1.0.0",
-  "description": "Sample app for using mysql with node",
+  "description": "College Management System",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
