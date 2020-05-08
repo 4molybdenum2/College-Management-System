@@ -1,0 +1,36 @@
+<h1><%=title%></h1>
+
+<!-- Kartik tu yaha changes kar sakta hai tereko agar koi bootstrap configure karna ho fir-->
+<div class="container">
+        <table border='1'>
+                <tr>
+                    <td>Lecturer ID</td>
+                    <td>Classroom</td>
+                    <td>Subject ID</td>
+                    <td>Type</td>
+                    <td>Lecturer ID</td>
+                    <td>Duration</td>
+                </tr>
+            <%
+            if(lecturesData.length!=0){
+            lecturesData.forEach(data => {
+            %>
+                <tr>
+                    <td><%=data.lecturer_id %></td>
+                    <td><%=data.classroom %></td>
+                    <td><%=data.subject_id %></td>
+                    <td><%=data.type %></td>
+                    <td><%=data.lecturer_id %></td>
+                    <td><%=data.duration %></td>
+                </tr>
+            <% }) %>
+
+            <% } else{ %>
+                <tr>
+                    <td colspan="7">No Data Found</td>
+                </tr>
+            <% } %>
+
+        </table>
+        <a class="btn btn-outline-secondary btn-lg" href="/" role="button">Home</a>
+</div>

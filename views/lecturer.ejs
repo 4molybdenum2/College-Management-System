@@ -1,0 +1,32 @@
+<h1><%=title%></h1>
+
+<!-- Kartik tu yaha changes kar sakta hai tereko agar koi bootstrap configure karna ho fir-->
+<div class="container">
+        <table border='1'>
+                <tr>
+                    <td>Lecturer ID</td>
+                    <td>Lecturer Name</td>
+                    <td>Email ID</td>
+                    <td>Contact No.</td>
+                </tr>
+            <%
+            if(lecturerData.length!=0){
+            lecturerData.forEach(data => {
+            %>
+                <tr>
+                    <td><%=data.lecturer_id %></td>
+                    <td><%=data.lecturer_name %></td>
+                    <td><%=data.email_id %></td>
+                    <td><%=data.contact_no %></td>
+                </tr>
+            <% }) %>
+
+            <% } else{ %>
+                <tr>
+                    <td colspan="7">No Data Found</td>
+                </tr>
+            <% } %>
+
+        </table>
+        <a class="btn btn-outline-secondary btn-lg" href="/" role="button">Home</a>
+</div>

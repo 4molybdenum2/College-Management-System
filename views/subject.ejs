@@ -1,0 +1,31 @@
+<h1><%=title%></h1>
+
+<!-- Kartik tu yaha changes kar sakta hai tereko agar koi bootstrap configure karna ho fir-->
+<div class="container">
+        <table border='1'>
+                <tr>
+                    <td>Subject Code</td>
+                    <td>Subject Name</td>
+                    <td>Credits</td>
+                </tr>
+            <%
+            if(subjectData.length!=0){
+            subjectData.forEach(data => {
+            %>
+                <tr>
+                    <td><%=data.subject_code %></td>
+                    <td><%=data.subject_name %></td>
+                    <td><%=data.credits %></td>
+                    
+                </tr>
+            <% }) %>
+
+            <% } else{ %>
+                <tr>
+                    <td colspan="7">No Data Found</td>
+                </tr>
+            <% } %>
+
+        </table>
+        <a class="btn btn-outline-secondary btn-lg" href="/" role="button">Home</a>
+</div>
