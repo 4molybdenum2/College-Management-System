@@ -1,0 +1,33 @@
+<h1><%=title%></h1>
+
+<!-- Kartik tu yaha changes kar sakta hai tereko agar koi bootstrap configure karna ho fir-->
+<div class="container">
+        <table border='1'>
+                <tr>
+                    <td>Branch ID</td>
+                    <td>Branch Name</td>
+                    <td>Course Duration</td>
+                    <td>Degree Granted</td>
+                    <td>Seats</td>
+                </tr>
+            <%
+            if(branchData.length!=0){
+            branchData.forEach(data => {
+            %>
+                <tr>
+                    <td><%=data.branch_id %></td>
+                    <td><%=data.branch_name %></td>
+                    <td><%=data.course_duration %></td>
+                    <td><%=data.degree_granted %></td>
+                    <td><%=data.seats %></td>
+                </tr>
+            <% }) %>
+
+            <% } else{ %>
+                <tr>
+                    <td colspan="7">No Data Found</td>
+                </tr>
+            <% } %>
+
+        </table>
+</div>

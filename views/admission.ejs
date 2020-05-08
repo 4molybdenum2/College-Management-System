@@ -1,0 +1,30 @@
+<h1><%=title%></h1>
+
+<!-- Kartik tu yaha changes kar sakta hai tereko agar koi bootstrap configure karna ho fir-->
+<div class="container">
+        <table border='1'>
+                <tr>
+                    <td>Registration ID</td>
+                    <td>Date of Enrollment</td>
+                    <td>Batch ID</td>
+                </tr>
+            <%
+            if(admissionData.length!=0){
+            admissionData.forEach(data => {
+            %>
+                <tr>
+                    <td><%=data.registration_id %></td>
+                    <td><%=data.date_of_enrollment %></td>
+                    <td><%=data.batch_id %></td>
+                    
+                </tr>
+            <% }) %>
+
+            <% } else{ %>
+                <tr>
+                    <td colspan="7">No Data Found</td>
+                </tr>
+            <% } %>
+
+        </table>
+</div>
