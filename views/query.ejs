@@ -1,0 +1,32 @@
+<h1>Querying</h1>
+
+<form action="/query" method="POST">
+    <label>Enter query:</label>
+    <input id="query" type="text" name="querytext" placeholder="enter your query">
+    <input type="submit">
+</form>
+
+<div class="container">
+    <div class="response">
+        <table border='1'>
+        <%
+            if(data.length!=0){
+            data.forEach(item => {
+
+                const v = Object.values(item);
+            %>
+                <tr>
+                   <% for(var i=0;i<v.length;i++){ %>
+                       <td><%=v[i]%></td>
+                    <%}%>
+                </tr>
+            <% }) %>
+
+            <% } else{ %>
+                <tr>
+                    <td colspan="7">No Data Found</td>
+                </tr>
+            <% } %>
+        </table>
+    </div>
+</div>
