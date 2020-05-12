@@ -7,19 +7,24 @@
         <table class="table" border='1'>
             <tr  class="thread.bg-primary">
 
-                    <td>Subject Code</td>
-                    <td>Subject Name</td>
-                    <td>Credits</td>
+                    <td>Employee ID</td>
+                    <td>Name</td>
+                    <td>Email ID</td>
+                    <td>Salary</td>
+                    <td>Position</td>
+                    <td>Contact No.</td>
                 </tr>
             <%
-            if(subjectData.length!=0){
-            subjectData.forEach(data => {
+            if(employeeData.length!=0){
+            employeeData.forEach(data => {
             %>
                 <tr>
-                    <td><%=data.subject_code %></td>
-                    <td><%=data.subject_name %></td>
-                    <td><%=data.credits %></td>
-                    
+                    <td><%=data.employee_id %></td>
+                    <td><%=data.name %></td>
+                    <td><%=data.email_id %></td>
+                    <td><%=data.salary %></td>
+                    <td><%=data.position %></td>
+                    <td><%=data.contact_no %></td>
                 </tr>
             <% }) %>
 
@@ -30,4 +35,5 @@
             <% } %>
 
         </table>
-        <a class="btn btn-outline-secondary btn-lg" href="/" role="button" style="margin-left: 45%; background-color:#EB6864; color: #ffffff; margin-top:5%">Home</a></div>
+        <a class="btn btn-outline-secondary btn-lg" href="/" role="button"  style="margin-left: 45%; background-color:#EB6864; color: #ffffff; margin-top:5" >Home</a>
+        </div>

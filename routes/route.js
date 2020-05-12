@@ -71,4 +71,12 @@ router.get('/timetable',(req,res)=>{
     })
 })
 
+router.get('/employee',(req,res)=>{
+    let sql = 'SELECT * FROM employee';
+    let query = db.query(sql,(err,result)=>{
+        if(err) throw err;
+        res.render('employee' ,{title:"Employee Table" , employeeData: result});
+    })
+})
+
 module.exports = router;
