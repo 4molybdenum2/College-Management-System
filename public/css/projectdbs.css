@@ -1,0 +1,30 @@
+.navbar-brand mx-auto
+{
+    font-family:sans-serif;
+     font-size: 35px;
+}
+
+.container1{
+    margin-top:10%;
+     margin-left:2%;
+}
+
+.container2
+{
+    margin-top:10%;
+}
+
+.container3
+{
+    margin-top:10%;margin-left:5%;
+}
+
+.table
+{
+    border-color: black;
+}
+.btn btn-outline-secondary btn-lg{
+margin-left: 45%;
+ background-color:#EB6864;
+ color: #ffffff;
+}
