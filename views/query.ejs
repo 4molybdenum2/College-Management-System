@@ -4,10 +4,9 @@
 </nav>
 </header>
 <div class="form1" style="margin-top: 20%; margin-left:30%;">
-    
+<h3>ENTER QUERY: </h3>    
 <form action="/query" method="POST">
-    <label>Enter query:</label>
-    <input id="query" type="text" name="querytext" placeholder="enter your query">
+    <textarea name="querytext" id="query" cols="30" rows="5"></textarea>
     <input type="submit">
 </form>
 <div>
@@ -33,6 +32,6 @@
                 </tr>
             <% } %>
         </table>
-        <a class="btn btn-outline-secondary btn-lg" href="/" role="button" style="margin-left: 45%; background-color:#EB6864; color: #ffffff; margin-top:5%" >Home</a>
+        <a class="btn btn-outline-secondary btn-lg" href="/" role="button" style="margin-left: 0%; background-color:#EB6864; color: #ffffff; margin-top:5%" >Home</a>
     </div>
 </div>
