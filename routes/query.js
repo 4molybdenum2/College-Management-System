@@ -11,7 +11,10 @@ router.post('/query' , (req,res)=>{
     const sql = req.body.querytext;
     if (!sql) res.status(400).send("Invalid Input");
     let query = db.query({sql: sql,timeout:30000},(err,result)=>{
-        if(err) throw err;
+        if(err) {
+            throw err;
+            res.send('Internal Server Error!');
+        }
         data = result;
         res.redirect('/query');
     });

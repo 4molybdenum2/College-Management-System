@@ -15,14 +15,6 @@ router.get('/student',(req,res)=>{
     })
 })
 
-router.get('/admission',(req,res)=>{
-    let sql = 'SELECT * FROM admission';
-    let query = db.query(sql,(err,result)=>{
-        if(err) throw err;
-        res.render('admission' ,{title:"Admission Table" , admissionData: result});
-    })
-})
-
 router.get('/batch',(req,res)=>{
     let sql = 'SELECT * FROM batch';
     let query = db.query(sql,(err,result)=>{
