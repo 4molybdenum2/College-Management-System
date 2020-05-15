@@ -4,6 +4,7 @@
 This is the frontend implementation of our database College Management System.This is made using Express JS as a server-side framework and EJS as a templating language. You will find the sql file for our database as __collegemanagementnew.sql__ in root directory.<br><br> 
 * Used __Node JS__ in backend.<br><br>
 * __EJS__ is used as a templating engine.<br><br>
+* SQL file: collegemanagementnew.sql. Please install before proceeding<br><br>
 
 # Installation
 
